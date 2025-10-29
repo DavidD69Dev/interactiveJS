@@ -15,3 +15,39 @@ function applyTheme(index) {
 }
 
 applyTheme(randomNumber)
+
+
+const closeBtn = document.querySelector(".close-btn");
+const navbar =document.querySelector(".navbar");
+const btnBurger = document.querySelector(".btn-burger");
+
+closeBtn.addEventListener("click", () => {
+    navbar.classList.add("navbar-hidden")
+})
+
+btnBurger.addEventListener("click", () => {
+    navbar.classList.remove("navbar-hidden")
+})
+
+
+const overlay = document.querySelector(".overlay");
+const modale = document.querySelector(".modale");
+const closeModale = document.querySelector(".closeModale");
+const title = document.querySelector("h1");
+title.style.cursor = "pointer"
+
+function closeModaleFunction () {
+    overlay.style.display = "none"
+    modale.style.display = "none"
+}
+
+function openModaleFunction () {
+    overlay.style.display = "block"
+    modale.style.display= "flex"
+}
+
+closeModale.addEventListener("click", closeModaleFunction)
+overlay.addEventListener("click", closeModaleFunction)
+modale.addEventListener("click", event => event.stopPropagation())
+
+title.addEventListener("click", openModaleFunction)
