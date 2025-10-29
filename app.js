@@ -1,13 +1,6 @@
 import { colors } from "./datas/colors.js";
 
-// console.log(colors);
-
-// console.log(Math.random());
-// console.log(Math.random()*5);
-// console.log(Math.floor(Math.random()*5));
-
 const randomNumber = Math.floor(Math.random()*colors.length);
-console.log(randomNumber);
 
 const root = document.documentElement
 
